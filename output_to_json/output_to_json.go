@@ -11,7 +11,7 @@ func main() {
 	fmt.Println("{")
 
 	for key, resource := range entity.ResourceNameToResourceMap {
-		fmt.Println("\"", key, "\":")
+		fmt.Printf("\"%v\":", key)
 
 		jsonResource, err := json.Marshal(resource)
 		if err != nil {
